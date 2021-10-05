@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PlayerLab:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PlayerLab_jar</output-path>
+    <root id="archive" name="PlayerLab.jar">
+      <element id="module-output" name="GameSimulator" />
+    </root>
+  </artifact>
+</component>
