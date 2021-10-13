@@ -5,7 +5,6 @@ public class Game {
      private ArrayList<Player> teamOne=new ArrayList<>(5);
      private ArrayList<Player> teamTwo=new ArrayList<>(5);
      private boolean winTeam;
-     static int count =0;
 
     public Game(int gameMode) {
         this.gameMode = gameMode;
@@ -96,7 +95,6 @@ public class Game {
         return result;
     }
      public void toGame(ArrayList<Player> lig){
-        count++;
         makeTeams(lig);
         int randomMrr=(new Random().nextInt(10)+15);
         whoWin();

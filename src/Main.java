@@ -1,5 +1,3 @@
-import labs.RandomString;
-
 import java.io.IOException;
 import java.util.*;
 
@@ -62,7 +60,7 @@ public class Main {
                 case 1:
                     leaugeGame(leagues);
                     System.out.println("Кол-во игроков удаливших игру=" + leagues.count);
-                    System.out.println("Для продолжения нажмите любую клавишу..."+Game.count);
+                    System.out.println("Для продолжения нажмите любую клавишу...");
                     in.nextLine();
                     break;
                 case 2:
