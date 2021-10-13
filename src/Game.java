@@ -5,6 +5,7 @@ public class Game {
      private ArrayList<Player> teamOne=new ArrayList<>(5);
      private ArrayList<Player> teamTwo=new ArrayList<>(5);
      private boolean winTeam;
+     static int count =0;
 
     public Game(int gameMode) {
         this.gameMode = gameMode;
@@ -38,7 +39,7 @@ public class Game {
             team.add(temp);
         }
     }
-    private int gesSredTeamOne(){
+    private int gesAvgTeamOne(){
          int cour=0;
         for (Player p:teamOne) {
             cour+=p.getMmr();
@@ -64,7 +65,7 @@ public class Game {
                 }
             }
         } else {
-            lastMMR = gesSredTeamOne();
+            lastMMR = gesAvgTeamOne();
             for (int i = 0; i < 5; i++) {
 
                 mark:
@@ -78,17 +79,6 @@ public class Game {
             }
         }
     }
-//     private void makeTeam(ArrayList<Player> leaguePlayers,ArrayList<Player> team){
-//        for (int i = 0; i < 5; i++) {
-//            mark:for (Player p:leaguePlayers) {
-//                    if (!p.isStatusGame()) {
-//                        team.add(p);
-//                        p.setStatusGame(true);
-//                        break mark;
-//                    }
-//            }
-//        }
-//    }
      private void whoWin(){
         int random=new Random().nextInt(100);
         random+=(getMrr()/400);
@@ -106,6 +96,7 @@ public class Game {
         return result;
     }
      public void toGame(ArrayList<Player> lig){
+        count++;
         makeTeams(lig);
         int randomMrr=(new Random().nextInt(10)+15);
         whoWin();

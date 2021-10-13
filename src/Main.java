@@ -62,7 +62,7 @@ public class Main {
                 case 1:
                     leaugeGame(leagues);
                     System.out.println("Кол-во игроков удаливших игру=" + leagues.count);
-                    System.out.println("Для продолжения нажмите любую клавишу...");
+                    System.out.println("Для продолжения нажмите любую клавишу..."+Game.count);
                     in.nextLine();
                     break;
                 case 2:
